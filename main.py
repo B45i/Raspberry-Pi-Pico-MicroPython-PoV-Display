@@ -6,6 +6,8 @@ leds = [Pin(x, Pin.OUT) for x in range(5)]
 for led in leds:
     led.value(0)
 
+# Generated using: https://pov-display-calc.vercel.app/
+# Source: https://github.com/B45i/pov-display-calc
 alphabets = [
     [30, 5, 5, 30, 0],
     [31, 21, 21, 10, 0],
@@ -81,7 +83,8 @@ def display_string(s):
     global alphabets
     for c in list(s.upper()):
         display_letter(alphabets[ord(c) - 91])
-        time.sleep(.5)
+        time.sleep(.008)
+
 
 while True:
-    display_string('abcd')
+    display_string('Hello')
